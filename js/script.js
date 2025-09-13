@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // tabs switch function
 let lastScrollSwitchTime = 0;
-const scrollThrottleDelay = 500; // milliseconds
+const scrollThrottleDelay = 5000; // milliseconds
 const tabBar = document.getElementById("tabBar");
 const tabBtns = document.querySelectorAll(".tab-btn");
 const tabSections = document.querySelectorAll(".tab-section");
