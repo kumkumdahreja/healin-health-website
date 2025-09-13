@@ -1,0 +1,631 @@
+:root {
+  --primary: #393562;
+  --accent: #ffca28;
+  --light: #fcfcfc;
+  --dark: #232334;
+  --text: #3a3742;
+  --gray: #9190a9;
+  --white: #ffffff;
+  --light-gray: #f7f6f2;
+  --bg-color: #f5fffc;
+  --black: #000;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s ease;
+  --navbar-height: 80px;
+  --hero-height: 95vh;
+  --container-width: 100%;
+  --container-max-width: 1450px;
+  --yellow: #fffdb2;
+  --purple: #e8e1f9;
+  --pink: #ffe1f3;
+  --blue: #e5f0ff;
+  --new-gray: #f4f4f4;
+  --text-dark: #252532;
+  --text-mid: #44495a;
+  --creme: #fef7ed;
+  --new-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.07);
+  --section-pad: 36px;
+  --tab-height: 54px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif; /* A modern, sleek font */
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  font-weight: 400;
+}
+
+.main-container {
+  width: 100%;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* Header & Navigation */
+.navbar {
+    background-color: var(--bg-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: var(--navbar-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    box-shadow: var(--subtle-shadow);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo a {
+    display: inline-block;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: var(--transition);
+    font-size: 13px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* DROPDOWN and MEGA MENU for HOVER */
+.dropdown {
+    position: relative;
+}
+
+.mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: var(--new-shadow);
+    z-index: 2000;
+    border: 1px solid var(--new-gray);
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: 30px 30px 20px 30px;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    overflow-y: auto;
+    max-height: 450px;
+}
+
+/* This class targets the mega menu for 'Our Therapies' and keeps it centered and wide */
+.our-therapies-mega-menu {
+    margin-left: -325px;
+    width: 90vw;
+    max-width: 1400px;
+}
+
+/* This class targets the mega menus for 'Our Packages', 'Conditions Hub', and 'More' to make them smaller and centered */
+#mega-menu-packages,
+#mega-menu-conditions,
+#mega-menu-more {
+    width: max-content;
+    min-width: 250px;
+    padding: 20px;
+    height: auto;
+    overflow-y: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#mega-menu-more {
+    max-width: 1200px;
+}
+
+#mega-menu-packages,
+#mega-menu-conditions {
+    max-width: 400px;
+}
+
+.dropdown:hover .mega-menu {
+    display: flex;
+}
+
+/* Columns */
+.mega-col {
+    flex: 1 1 0%;
+    min-width: 180px;
+    max-width: 300px;
+    padding-right: 16px;
+    overflow-y: hidden;
+    height: 100%;
+}
+
+.mega-title {
+    font-size: 15px;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: 5px;
+    letter-spacing: 0.02em;
+}
+
+.mega-title.spaced {
+    margin-top: 24px;
+}
+
+.mega-col ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 7px;
+}
+
+.mega-col ul li {
+    font-size: 13px;
+    color: var(--text);
+    margin-bottom: 6px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+    padding-left: 0;
+}
+
+.mega-col ul li a {
+    text-decoration: none;
+    color: var(--text);
+    display: block;
+    padding: 2px 0;
+}
+
+.mega-col ul li a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* Small Account Dropdown */
+.account-link {
+    display: flex;
+    align-items: center;
+}
+
+.account-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: 180px;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--new-shadow);
+    border: 1px solid var(--new-gray);
+    z-index: 2000;
+    padding: 10px;
+}
+
+.account-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.account-dropdown ul li a {
+    display: block;
+    padding: 8px 10px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.account-dropdown ul li a:hover {
+    background-color: var(--light-gray);
+    border-radius: 4px;
+    color: var(--primary);
+}
+
+.account-link:hover .account-dropdown {
+    display: block;
+}
+
+/* Button Styling */
+.btn-primary-a {
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    font-size: 14px;
+    background: var(--accent);
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.btn-primary-a:hover {
+    background: #ffca28;
+    transform: translateY(-2px);
+    color: var(--dark);
+}
+
+.btn {
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    font-size: 14px;
+    background: transparent;
+    border: 1.5px solid var(--gray);
+    color: var(--text);
+}
+
+.btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+/* --- RESPONSIVE STYLES --- */
+
+/* Initially hide the hamburger menu and the menu overlay */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger-menu {
+    display: none; /* Hide by default */
+}
+
+@media (max-width: 1100px) {
+    .navbar {
+        padding: 0 5%;
+    }
+
+    /* Hide the main nav links and buttons on smaller screens */
+    .nav-links,
+    .nav-buttons {
+        display: none;
+    }
+
+    /* Display the hamburger icon on smaller screens */
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .hamburger-menu .bar {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: var(--text);
+        border-radius: 3px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Animate the hamburger bars into an 'X' */
+    #menu-toggle:checked ~ .hamburger-menu .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    #menu-toggle:checked ~ .hamburger-menu .bar:nth-child(2) {
+        opacity: 0;
+    }
+    #menu-toggle:checked ~ .hamburger-menu .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* The vertical sidebar menu container */
+    .nav-links,
+    .nav-buttons {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100%;
+        width: 80%;
+        max-width: 350px;
+        background-color: var(--bg-color);
+        box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        transition: right 0.3s ease-in-out;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px 20px 20px;
+        gap: 15px;
+        overflow-y: auto; /* This makes the sidebar vertically scrollable */
+        -webkit-overflow-scrolling: touch; /* Improves scrolling on iOS */
+    }
+
+    /* Push the menu on-screen when the checkbox is checked */
+    #menu-toggle:checked ~ .nav-links {
+        right: 0;
+        display: flex;
+    }
+    #menu-toggle:checked ~ .nav-buttons {
+        right: 0;
+        display: flex;
+        top: auto; /* Allow buttons to move below the links */
+        bottom: 0;
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        width: 80%;
+        max-width: 350px;
+    }
+
+    /* Make buttons and links full width in the sidebar */
+    .nav-links a,
+    .nav-buttons a,
+    .nav-buttons button {
+        display: block; /* Change from flex to block for simple text links */
+        width: 100%;
+        text-align: left;
+        padding: 12px 15px;
+        border-radius: 8px;
+        background-color: var(--light-gray);
+        border: none;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    /* Universal style for all dropdowns and their sub-menus */
+    .dropdown {
+        width: 100%;
+    }
+
+    /* Hide all nested mega menus and sub-lists by default */
+    .mega-menu,
+    .account-dropdown,
+    .dropdown ul {
+        display: none;
+        position: static;
+        flex-direction: column;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        overflow-y: visible;
+    }
+    
+    /* Make sub-links and menus display as simple blocks when the parent is hovered on desktop */
+    .dropdown:hover > .mega-menu,
+    .dropdown:hover > .account-dropdown,
+    .dropdown:hover > ul {
+        display: block;
+    }
+
+    /* Add an indentation for all nested lists */
+    .dropdown ul {
+        padding-left: 15px;
+    }
+
+    /* Fix for mega menu columns in mobile */
+    .mega-col {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        padding: 0;
+        height: auto;
+        overflow-y: visible;
+    }
+}
+
+/* Footer */
+footer {
+    background: var(--bg-color);
+    color: var(--black);
+    padding: 80px 5% 50px;
+    position: relative;
+    z-index: 1000;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 60px;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+}
+
+.footer-column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--black);
+    font-weight: 600;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: var(--dark);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: var(--transition);
+    font-weight: 400;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    color: #007936;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* --- RESPONSIVE STYLES --- */
+
+/* For screens smaller than 1200px (laptops, tablets) */
+@media (max-width: 1200px) {
+    .footer-content {
+        gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* For screens smaller than 768px (tablets) */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* For screens smaller than 480px (mobile phones) */
+@media (max-width: 480px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .footer-bottom {
+        text-align: left;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .platform-section {
+    flex-direction: column;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .stats {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .email-form {
+    flex-direction: column;
+  }
+
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .big-stat {
+    font-size: 3rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* This is your current desktop design. */
+.second-container {
+    background-color: var(--creme);
+    width: 1450px;
+    padding: 90px;
+    margin: auto;
+}
+
+/* * Styles for devices with a screen width of 1450px or less.
+ * This will apply to tablets and mobile phones.
+ */
+@media (max-width: 1450px) {
+    .second-container {
+        width: 100%;
+        max-width: 1450px;
+        padding: 50px 5%;
+        margin: 0 auto;
+    }
+}
+
+/* * Further adjustments for very small devices, like mobile phones.
+ * This will override the above styles on even smaller screens.
+ */
+@media (max-width: 768px) {
+    .second-container {
+        padding: 30px 20px;
+    }
+}
