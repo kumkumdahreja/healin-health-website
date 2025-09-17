@@ -53,408 +53,338 @@ a {
 }
 
 
-/* Header & Navigation */
+/* Navbar Layout */
 .navbar {
-    background-color: var(--bg-color);
+  background-color: var(--bg-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  box-shadow: var(--subtle-shadow);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: var(--transition);
+  font-size: 13px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+.nav-links a:hover {
+  color: var(--primary);
+  text-decoration: none;
+}
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.btn-primary-a {
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  font-size: 14px;
+  background: var(--accent);
+  color: var(--dark);
+  text-decoration: none;
+}
+.btn-primary-a:hover {
+  background: #ffca28;
+  transform: translateY(-2px);
+  color: var(--dark);
+}
+.btn {
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  border: 1.5px solid var(--new-gray);
+  font-size: 14px;
+  background: transparent;
+  color: var(--text);
+}
+.btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.menu-toggle { display: none; }
+.hamburger-menu { display: none; }
+
+/* Mega Menu Base Styles */
+.dropdown {
+  position: relative;
+}
+.mega-menu,
+.account-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: var(--new-shadow);
+  border: 1px solid var(--new-gray);
+  z-index: 2000;
+  box-sizing: border-box;
+  padding: 30px 30px 20px 30px;
+  min-width: 250px;
+}
+.dropdown:hover > .mega-menu,
+.account-link:hover > .account-dropdown,
+.account-dropdown:hover {
+  display: block;
+}
+
+/* Mega menu columns */
+.mega-col {
+  min-width: 180px;
+  max-width: 340px;
+  padding-right: 16px;
+}
+.mega-title {
+  font-size: 15px;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--light-gray);
+  padding-bottom: 5px;
+}
+.mega-col ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 7px;
+}
+.mega-col ul li {
+  font-size: 13px;
+  color: var(--text);
+  margin-bottom: 6px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.mega-col ul li a {
+  text-decoration: none;
+  color: var(--text);
+  display: block;
+  padding: 2px 0;
+}
+.mega-col ul li a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* OUR THERAPIES MEGA MENU TWO-ROW GRID */
+.our-therapies-mega-menu {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  max-width: 96vw;
+  padding: 32px 32px 18px 32px;
+  background: var(--white, #fff);
+}
+.therapy-mega-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 in a row */
+  grid-template-rows: repeat(2, 1fr);    /* 2 rows */
+  gap: 26px 20px;
+}
+.therapy-mega-card {
+  background: var(--light-gray, #f5f5f7);
+  border-radius: 14px;
+  padding: 18px 18px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-light, 0 1px 4px rgba(20,20,38,0.04));
+  align-items: flex-start;
+  min-height: 110px;
+  transition: box-shadow 0.15s;
+}
+.therapy-mega-card:hover {
+  box-shadow: 0 6px 24px rgba(20,20,38,0.13);
+}
+.therapy-mega-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 7px;
+}
+.therapy-mega-desc {
+  font-size: 13px;
+  color: var(--text, #232324);
+  opacity: .77;
+  margin-bottom: 9px;
+  line-height: 1.5;
+}
+.therapy-mega-learn {
+  font-size: 13px;
+  color: var(--primary);
+  text-decoration: underline;
+  font-weight: 500;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+.therapy-mega-learn:hover {
+  color: var(--accent, #ffcb31);
+}
+
+/* Account Dropdown Details */
+.account-link {
+  display: flex;
+  align-items: center;
+}
+.account-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 180px;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: var(--new-shadow);
+  border: 1px solid var(--new-gray);
+  z-index: 2000;
+  padding: 10px;
+}
+.account-link:hover .account-dropdown,
+.account-dropdown:hover {
+  display: block;
+}
+.account-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.account-dropdown ul li a {
+  display: block;
+  padding: 8px 10px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+}
+.account-dropdown ul li a:hover {
+  background-color: var(--light-gray);
+  border-radius: 4px;
+  color: var(--primary);
+}
+
+/* Responsive: Hamburger and Mega Menus */
+@media (max-width: 1100px) {
+  .navbar { padding: 0 3%; }
+  .nav-links, .nav-buttons { display: none; }
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  .hamburger-menu .bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--text);
+    border-radius: 3px;
+    transition: all 0.3s;
+  }
+  #menu-toggle:checked ~ .hamburger-menu .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  #menu-toggle:checked ~ .hamburger-menu .bar:nth-child(2) {
+    opacity: 0;
+  }
+  #menu-toggle:checked ~ .hamburger-menu .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  .nav-links,
+  .nav-buttons {
     position: fixed;
     top: 0;
-    width: 100%;
-    z-index: 1000;
-    height: var(--navbar-height);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5%;
-    box-shadow: var(--subtle-shadow);
-}
-
-.logo {
-    font-size: 22px;
-    font-weight: 500;
-    color: var(--primary);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.logo a {
-    display: inline-block;
-}
-
-.logo-img {
-    height: 40px;
-    width: auto;
-    object-fit: contain;
-    display: block;
-}
-
-.nav-links {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text);
-    font-weight: 500;
-    transition: var(--transition);
-    font-size: 13px;
-    padding: 6px 8px;
-    border-radius: 6px;
-    display: inline-block;
-}
-
-.nav-links a:hover {
-    color: var(--primary);
-    text-decoration: none;
-}
-
-.nav-buttons {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-/* DROPDOWN and MEGA MENU for HOVER */
-.dropdown {
-    position: relative;
-}
-
-.mega-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    background: var(--white);
-    border-radius: 16px;
-    box-shadow: var(--new-shadow);
-    z-index: 2000;
-    border: 1px solid var(--new-gray);
-    justify-content: flex-start;
-    box-sizing: border-box;
-    padding: 30px 30px 20px 30px;
-    gap: 40px;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    overflow-y: auto;
-    max-height: 450px;
-}
-
-/* This class targets the mega menu for 'Our Therapies' and keeps it centered and wide */
-.our-therapies-mega-menu {
-    margin-left: -325px;
-    width: 90vw;
-    max-width: 1400px;
-}
-
-/* This class targets the mega menus for 'Our Packages', 'Conditions Hub', and 'More' to make them smaller and centered */
-#mega-menu-packages,
-#mega-menu-conditions,
-#mega-menu-more {
-    width: max-content;
-    min-width: 250px;
-    padding: 20px;
-    height: auto;
-    overflow-y: hidden;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-#mega-menu-more {
-    max-width: 1200px;
-}
-
-#mega-menu-packages,
-#mega-menu-conditions {
-    max-width: 400px;
-}
-
-.dropdown:hover .mega-menu {
-    display: flex;
-}
-
-/* Columns */
-.mega-col {
-    flex: 1 1 0%;
-    min-width: 180px;
-    max-width: 300px;
-    padding-right: 16px;
-    overflow-y: hidden;
+    right: -100%;
     height: 100%;
-}
-
-.mega-title {
-    font-size: 15px;
-    color: var(--primary);
-    font-weight: 600;
-    margin-bottom: 12px;
-    border-bottom: 1px solid var(--light-gray);
-    padding-bottom: 5px;
-    letter-spacing: 0.02em;
-}
-
-.mega-title.spaced {
-    margin-top: 24px;
-}
-
-.mega-col ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 7px;
-}
-
-.mega-col ul li {
-    font-size: 13px;
-    color: var(--text);
-    margin-bottom: 6px;
-    font-weight: 400;
-    line-height: 1.4;
-    letter-spacing: 0.01em;
-    padding-left: 0;
-}
-
-.mega-col ul li a {
-    text-decoration: none;
-    color: var(--text);
-    display: block;
-    padding: 2px 0;
-}
-
-.mega-col ul li a:hover {
-    color: var(--primary);
-    text-decoration: underline;
-}
-
-/* Small Account Dropdown */
-.account-link {
-    display: flex;
-    align-items: center;
-}
-
-.account-dropdown {
-    display: none;
-    position: absolute;
-    top: calc(100% + 10px);
+    width: 80%;
+    max-width: 350px;
+    background: var(--bg-color, #fff);
+    z-index: 999;
+    transition: right 0.3s;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 78px 15px 15px 15px;
+    gap: 12px;
+    overflow-y: auto;
+  }
+  #menu-toggle:checked ~ .nav-links,
+  #menu-toggle:checked ~ .nav-buttons {
     right: 0;
-    width: 180px;
+    display: flex;
+  }
+  .nav-links a,
+  .nav-buttons a,
+  .nav-buttons button {
+    width: 100%;
+    text-align: left;
+    padding: 12px 13px;
+    border-radius: 8px;
+    background: var(--light-gray);
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .dropdown { width: 100%; }
+  .mega-menu,
+  .account-dropdown {
+    display: none !important;
+    position: static;
+    border-radius: 12px;
+    box-shadow: none;
+    min-width: unset;
     background: var(--white);
-    border-radius: 8px;
-    box-shadow: var(--new-shadow);
-    border: 1px solid var(--new-gray);
-    z-index: 2000;
-    padding: 10px;
+    padding: 9px 4px 0 16px;
+    width: 100%;
+  }
+  .therapy-mega-cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 18px 0;
+  }
+  .therapy-mega-card {
+    min-width: 0;
+    width: 100%;
+  }
 }
 
-.account-dropdown ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* Hide default arrow in summary tag if accidentally used */
+summary::-webkit-details-marker {
+  display: none;
 }
 
-.account-dropdown ul li a {
-    display: block;
-    padding: 8px 10px;
-    color: var(--text);
-    text-decoration: none;
-    font-size: 13px;
-}
-
-.account-dropdown ul li a:hover {
-    background-color: var(--light-gray);
-    border-radius: 4px;
-    color: var(--primary);
-}
-
-.account-link:hover .account-dropdown {
-    display: block;
-}
-
-/* Button Styling */
-.btn-primary-a {
-    padding: 8px 18px;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition);
-    border: none;
-    font-size: 14px;
-    background: var(--accent);
-    color: var(--dark);
-    text-decoration: none;
-}
-
-.btn-primary-a:hover {
-    background: #ffca28;
-    transform: translateY(-2px);
-    color: var(--dark);
-}
-
-.btn {
-    padding: 8px 18px;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition);
-    border: none;
-    font-size: 14px;
-    background: transparent;
-    border: 1.5px solid var(--gray);
-    color: var(--text);
-}
-
-.btn:hover {
-    border-color: var(--primary);
-    color: var(--primary);
-}
-
-/* --- RESPONSIVE STYLES --- */
-
-/* Initially hide the hamburger menu and the menu overlay */
-.menu-toggle {
-    display: none;
-}
-
-.hamburger-menu {
-    display: none; /* Hide by default */
-}
-
-@media (max-width: 1100px) {
-    .navbar {
-        padding: 0 5%;
-    }
-
-    /* Hide the main nav links and buttons on smaller screens */
-    .nav-links,
-    .nav-buttons {
-        display: none;
-    }
-
-    /* Display the hamburger icon on smaller screens */
-    .hamburger-menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 30px;
-        height: 25px;
-        cursor: pointer;
-        z-index: 1001;
-    }
-
-    .hamburger-menu .bar {
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: var(--text);
-        border-radius: 3px;
-        transition: all 0.3s ease-in-out;
-    }
-
-    /* Animate the hamburger bars into an 'X' */
-    #menu-toggle:checked ~ .hamburger-menu .bar:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-    #menu-toggle:checked ~ .hamburger-menu .bar:nth-child(2) {
-        opacity: 0;
-    }
-    #menu-toggle:checked ~ .hamburger-menu .bar:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-    /* The vertical sidebar menu container */
-    .nav-links,
-    .nav-buttons {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        height: 100%;
-        width: 80%;
-        max-width: 350px;
-        background-color: var(--bg-color);
-        box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
-        z-index: 999;
-        transition: right 0.3s ease-in-out;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 80px 20px 20px;
-        gap: 15px;
-        overflow-y: auto; /* This makes the sidebar vertically scrollable */
-        -webkit-overflow-scrolling: touch; /* Improves scrolling on iOS */
-    }
-
-    /* Push the menu on-screen when the checkbox is checked */
-    #menu-toggle:checked ~ .nav-links {
-        right: 0;
-        display: flex;
-    }
-    #menu-toggle:checked ~ .nav-buttons {
-        right: 0;
-        display: flex;
-        top: auto; /* Allow buttons to move below the links */
-        bottom: 0;
-        height: auto;
-        padding: 20px;
-        flex-direction: column;
-        width: 80%;
-        max-width: 350px;
-    }
-
-    /* Make buttons and links full width in the sidebar */
-    .nav-links a,
-    .nav-buttons a,
-    .nav-buttons button {
-        display: block; /* Change from flex to block for simple text links */
-        width: 100%;
-        text-align: left;
-        padding: 12px 15px;
-        border-radius: 8px;
-        background-color: var(--light-gray);
-        border: none;
-        font-size: 14px;
-        font-weight: 500;
-    }
-
-    /* Universal style for all dropdowns and their sub-menus */
-    .dropdown {
-        width: 100%;
-    }
-
-    /* Hide all nested mega menus and sub-lists by default */
-    .mega-menu,
-    .account-dropdown,
-    .dropdown ul {
-        display: none;
-        position: static;
-        flex-direction: column;
-        width: 100%;
-        box-shadow: none;
-        border: none;
-        background-color: transparent;
-        padding: 0;
-        overflow-y: visible;
-    }
-    
-    /* Make sub-links and menus display as simple blocks when the parent is hovered on desktop */
-    .dropdown:hover > .mega-menu,
-    .dropdown:hover > .account-dropdown,
-    .dropdown:hover > ul {
-        display: block;
-    }
-
-    /* Add an indentation for all nested lists */
-    .dropdown ul {
-        padding-left: 15px;
-    }
-
-    /* Fix for mega menu columns in mobile */
-    .mega-col {
-        width: 100%;
-        min-width: 100%;
-        max-width: 100%;
-        padding: 0;
-        height: auto;
-        overflow-y: visible;
-    }
-}
 
 /* Footer */
 footer {
@@ -467,11 +397,36 @@ footer {
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr); /* Adjusted for 5 columns */
     gap: 40px;
     margin-bottom: 60px;
     max-width: var(--container-max-width);
     margin: 0 auto;
+}
+
+/* New styles for the brand column */
+.footer-brand .footer-logo {
+    height: 40px;
+    margin-bottom: 12px;
+}
+.footer-brand .footer-description {
+    font-size: 0.9rem;
+    color: var(--dark);
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+.social-links img {
+    height: 24px;
+    width: 24px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+.social-links a:hover img {
+    opacity: 1;
 }
 
 .footer-column h4 {
@@ -483,6 +438,7 @@ footer {
 
 .footer-links {
     list-style: none;
+    padding: 0;
 }
 
 .footer-links li {
@@ -503,7 +459,7 @@ footer {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding-top: 30px;
     text-align: center;
     font-size: 0.9rem;
@@ -540,7 +496,6 @@ footer {
         text-align: left;
     }
 }
-
 /* Responsive Design */
 @media (max-width: 992px) {
   .platform-section {

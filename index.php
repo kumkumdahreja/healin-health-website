@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HealIn-Integrated AI Platform</title>
+  <link
+    rel="shortcut icon"
+    href="images/logo/favicon.png"
+    type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/animate.css">
+</head>
+
+<body class="wow fadeInUp">
+  <div class="main-container">
+    <?php include 'navbar.php'; ?>
+    <!-- Secondary Container -->
+    <div class="secondary-container">
+      <!-- Fixed Hero Container -->
+      <!-- <div class="hero-container">
+        <div class="hero">
+          <div class="hero-content">
+            <h1>Meet your AI outbound engine</h1>
+            <p>
+              Find and research leads, personalize messaging, and launch
+              campaigns in minutes — not hours. All in Apollo.
+            </p>
+
+            <div class="signup-options">
+              <div class="email-form">
+                <input type="email" placeholder="Enter your email" />
+                <button class="btn btn-primary">Sign up for free</button>
+              </div>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img
+              src="images/hero/Woman Meditating for Work Life Balance.png"
+              alt="HealIn Dashboard" />
+          </div>
+        </div>
+      </div> -->
+      <div class="hero-container">
+        <div class="hero">
+          <video autoplay muted loop class="hero-bg-video">
+            <source src="videos/12.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="hero-bg-overlay"></div>
+
+          <div class="hero-content centered-content">
+            <h1>Welcome to Heal In</h1>
+            <p>Experience a blend of ancient wisdom and modern therapy to restore your mind and body.</p>
+
+            <button class="btn btn-secondary demo-button"> <a href="book.php">Get a demo</a></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scrolling Content -->
+      <div class="scroll-container">
+        <div class="scroll-content">
+          <!-- About healin Section -->
+          <section class="section">
+            <div class="wellness-container">
+              <div class="wellness-header-row">
+                <div class="wellness-title-box wellness-fadein">
+                  <div class="wellness-title">Rooted in Wellness,</div>
+                  <div class="wellness-subtitle">Elevated by Healing</div>
+                </div>
+                <div class="wellness-desc wellness-fadein">
+                  At HealIn.Health, we champion a holistic, personalized
+                  approach to empowered healing<br />
+                  and meaningful well-being, guided by scientific rigor and
+                  heartfelt care.
+                </div>
+              </div>
+              <div class="wellness-image-row">
+                <img
+                  class="wellness-img wellness-fadein"
+                  src="images/home/1.png"
+                  alt="Healing Herbs and Natural Remedies" />
+                <img
+                  class="wellness-img wellness-fadein"
+                  src="images/home/envato-labs-ai-8354f68a-4745-420e-b983-06164d9b1ae0.jpg"
+                  alt="Personalized Wellness Therapy" />
+                <img
+                  class="wellness-img wellness-fadein"
+                  src="images/home/sound-healing.png"
+                  alt="Inner Balance and Calm" />
+              </div>
+              <div class="wellness-highlight wellness-fadein">
+                Healing is a journey beyond the surface — where science meets
+                soul.<br />
+                Our sanctuary nurtures your body, mind, and spirit to reclaim
+                balance and vitality.
+              </div>
+            </div>
+          </section>
+          <!-- About healin Section end -->
+
+          <!-- therapies bar Start -->
+          <section class="section">
+            <div class="therapies-bar">
+              <div
+                class="therapy-card"
+                style="
+                    background-image: url('images/therapy/Basic\ Physiotherapy\ &\ Pain\ Management.jpg');
+                  ">
+                <div class="card-content">
+                  <div class="title">
+                    <a href="therapies/realign.php" style="text-decoration: none;">
+                      ReAlign™
+                    </a>
+                  </div>
+                  <a href="therapies/realign.php" style="text-decoration: none;">
+                    <div class="subtitle">Read More</div>
+                    <div class="arrow-cta">&#8594;</div>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="therapy-card"
+                style="
+                    background-image: url('images/therapy/Basic\ Detox\ Programs.jpg');
+                  ">
+                <div class="card-content">
+                  <div class="title">
+                    <a href="therapies/skin-plus.php" style="text-decoration: none;">
+                      Skin+™
+                    </a>
+                  </div>
+                  <a href="therapies/skin-plus.php" style="text-decoration: none;">
+                    <div class="subtitle">Read More</div>
+                    <div class="arrow-cta">&#8594;</div>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="therapy-card"
+                style="
+                    background-image: url('images/therapy/Basic\ Ayurveda\ Therapy_\ Abhyanga\ Oil\ Massage\ 1.jpg');
+                  ">
+                <div class="card-content">
+                  <div class="title">
+                    <a href="therapies/signature-rituals.php" style="text-decoration: none;">
+                      Signature Rituals
+                  </div>
+                  </a>
+                  <a href="therapies/signature-rituals.php" style="text-decoration: none;">
+                    <div class="subtitle">Read More</div>
+                    <div class="arrow-cta">&#8594;</div>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="therapy-card last"
+                style="
+                    background-image: url('images/therapy/Naturopathic\ Consultation\ &\ Diet\ Planning\ 1.jpg');
+                  ">
+                <div class="card-content">
+                  <div class="title">
+                    <a href="therapies/resetcore.php" style="text-decoration: none;">
+                      ResetCore™
+                    </a>
+                  </div>
+                  <a href="therapies/resetcore.php" style="text-decoration: none;">
+                    <div class="subtitle">Read More</div>
+                    <div class="arrow-cta">&#8594;</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- therapies bar end -->
+
+          <!-- animated bertani section -->
+          <section class="section">
+            <iframe src="section.html" frameborder="0"></iframe>
+          </section>
+          <!-- animated bertani section -->
+
+          <!-- functional pillar section start -->
+          <section class="section">
+            <div class="heal-in-pillars-section">
+              <div class="heal-in-pillars-header">
+                <h2>Functional Pillars</h2>
+                <p>Essential systems that support your healing</p>
+              </div>
+              <div class="heal-in-pillars-cards">
+                <div class="heal-in-pillar-card">
+                  <div class="heal-in-pillar-icon-wrapper">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="black">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5A5.5 5.5 0 017.5 3a5.5 5.5 0 015.5 5.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                    </svg>
+                  </div>
+                  <h3>Mind-Body Balance</h3>
+                  <p>Breath, movement, and rest in harmony.</p>
+                </div>
+
+                <div class="heal-in-pillar-card">
+                  <div class="heal-in-pillar-icon-wrapper">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="black">
+                      <path
+                        d="M19 12h-2V7h-2V5h4V3h2V5h2v2h-2v5h-2v2h2v2h-2v-2h-2v-2h2v-2h2v-2h-2V7h-2V5h2V3h2V5h2V7h-2v5zM5 12V7h2V5h2v2h-2v5h2v2h-2v2h-2v-2h-2v-2h2v-2h-2V7h2V5H5V7H3v5z"></path>
+                    </svg>
+                  </div>
+                  <h3>Personalized Insights</h3>
+                  <p>AI guidance tuned to your rhythms.</p>
+                </div>
+
+                <div class="heal-in-pillar-card">
+                  <div class="heal-in-pillar-icon-wrapper">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="black">
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-4h-2V7h6v6h-2z"></path>
+                    </svg>
+                  </div>
+                  <h3>Natural Therapies</h3>
+                  <p>Herbal, nutritional, and light-touch care.</p>
+                </div>
+
+                <div class="heal-in-pillar-card">
+                  <div class="heal-in-pillar-icon-wrapper">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="black">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5A5.5 5.5 0 017.5 3c2.45 0 4.25 1.7 5.25 3.25L13.5 6.5a5.5 5.5 0 015.5 5.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                    </svg>
+                  </div>
+                  <h3>Daily Rituals</h3>
+                  <p>Tiny, consistent steps toward well-being.</p>
+                </div>
+
+                <div class="heal-in-pillar-card">
+                  <div class="heal-in-pillar-icon-wrapper">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="black">
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-4h-2V7h6v6h-2z"></path>
+                    </svg>
+                  </div>
+                  <h3>Progress & Reflection</h3>
+                  <p>Track, learn, and celebrate growth.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- functional pillar section end -->
+
+          <!-- tabs section start -->
+          <section class="section">
+            <div class="tabs-header">
+              <div class="tabs-bar" id="tabBar">
+                <button class="tab-btn tab-yellow active" data-tab="0">
+                  HealIn System
+                </button>
+                <button class="tab-btn tab-purple" data-tab="1">
+                  Wellness Clinics
+                </button>
+                <button class="tab-btn tab-pink" data-tab="2">
+                  ArogyaOS™ Tech
+                </button>
+                <button class="tab-btn tab-blue" data-tab="3">
+                  Therapies
+                </button>
+              </div>
+            </div>
+            <!-- TABS CONTENT -->
+            <div class="tabs-content">
+              <!-- Tab 1: Text left, image right -->
+              <section class="tab-section tab-yellow active">
+                <div class="tab-content-inner">
+                  <div class="section-text">
+                    <div class="tab-hero">
+                      HealIn.Health: Integrated Wellness Reimagined
+                    </div>
+                    <div class="tab-desc">
+                      India’s first tech-enabled, integrative health system
+                      delivering <b>holistic chronic care</b> by blending
+                      naturopathy, diagnostics, functional medicine, and
+                      advanced behavioral coaching. <br />
+                      Our mission:
+                      <b>Reversing chronic disease for everyone, everywhere</b>.
+                    </div>
+                    <div class="tab-actions">
+                      <a href="#" class="tab-btn-main">Get started</a>
+                      <a href="#" class="tab-btn-outline">Learn more</a>
+                    </div>
+                    <div class="tab-features-list">
+                      <div class="tab-feature">
+                        <span class="icon">&#127793;</span>
+                        <span>Prevention over cure:
+                          <span style="font-weight: 400">Root-cause lifestyle transformation,
+                            always.</span></span>
+                      </div>
+                      <div class="tab-feature">
+                        <span class="icon">&#128104;&#8205;&#127891;</span>
+                        <span>Personalization:
+                          <span style="font-weight: 400">Plans are tailored, never generic.</span></span>
+                      </div>
+                      <div class="tab-feature">
+                        <span class="icon">&#127968;</span>
+                        <span>Accessible:
+                          <span style="font-weight: 400">Clinics for all—no urban premium.</span></span>
+                      </div>
+                      <div class="tab-feature">
+                        <span class="icon">&#9881;&#65039;</span>
+                        <span>Data-driven:
+                          <span style="font-weight: 400">Standardized EHR & follow-up.</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section-image">
+                    <img
+                      src="images/home/wellness-1.png"
+                      alt="Holistic wellness" />
+                  </div>
+                </div>
+              </section>
+              <!-- Tab 2: Image left, text right -->
+              <section class="tab-section tab-purple">
+                <div class="tab-content-inner">
+                  <div class="section-image">
+                    <img
+                      src="images/home/envato-labs-ai-0b801ea5-818d-4c90-ab47-34d86bcb3f87.jpg"
+                      alt="Clinic interior" />
+                  </div>
+                  <div class="section-text">
+                    <div class="tab-hero">
+                      Wellness Clinics: Modern, Holistic, Personal
+                    </div>
+                    <div class="tab-desc">
+                      India’s first clinics to unite
+                      <b>naturopathy, physiotherapy, mind-body medicine, and
+                        dermatology</b>
+                      with digital-first care. <br />
+                      No more patchwork—embrace seamless, real reversal.
+                    </div>
+                    <div class="tab-actions">
+                      <a href="#" class="tab-btn-main">Find a Clinic</a>
+                      <a href="#" class="tab-btn-outline">Departments</a>
+                    </div>
+                    <div class="tab-features-list">
+                      <div class="tab-feature">
+                        <span class="icon">&#128305;</span>
+                        <span>ResetCore™:
+                          <span style="font-weight: 400">Naturopathy, fasting, hydro/infrared
+                            therapy.</span></span>
+                      </div>
+                      <div class="tab-feature">
+                        <span class="icon">&#129658;</span>
+                        <span>ReAlign™:
+                          <span style="font-weight: 400">Evidence-based physiotherapy, pain relief.</span></span>
+                      </div>
+                      <div class="tab-feature">
+                        <span class="icon">&#128137;</span>
+                        <span>Skin+™:
+                          <span style="font-weight: 400">Integrated skin, lymphatic, and facials.</span></span>
+                      </div>
+                      <div class="tab-feature">
+                        <span class="icon">&#128172;</span>
+                        <span>Mental Wellness:
+                          <span style="font-weight: 400">Stress management, neurofeedback, therapy.</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- Tab 3: Text left, image right -->
+              <section class="tab-section tab-pink">
+                <div class="tab-content-inner">
+                  <div class="section-text">
+                    <div class="tab-hero">
+                      ArogyaOS™ Tech: The Seamless Clinic Engine
+                    </div>
+                    <div class="tab-desc">
+                      <b>ArogyaOS™</b> digitizes clinics, protocols, and
+                      records for every HealIn.Health patient. <br />
+                      <b>CompanionOS™</b> keeps patients engaged between
+                      visits with daily progress tracking and behavioral
+                      nudges.<br />
+                      <span style="color: #9c197e">Measurable, connected, patient-centered care at
+                        scale.</span>
+                    </div>
+                    <div class="tab-actions">
+                      <a href="#" class="tab-btn-main">How it works</a>
+                      <a href="#" class="tab-btn-outline">Companion App</a>
+                    </div>
+                    <div class="tab-features-list">
+                      <div class="tab-feature">
+                        <span class="icon">&#128218;</span>
+                        <span>EHR:
+                          <span style="font-weight: 400">Paperless, portable, ABDM-compliant.</span></span>
+                      </div>
+                      <div class="tab-feature">
+                        <span class="icon">&#128172;</span>
+                        <span>24/7 Habit Coaching:
+                          <span style="font-weight: 400">Chat reminders, real progress.</span></span>
+                      </div>
+                      <div class="tab-feature">
+                        <span class="icon">&#9889;</span>
+                        <span>Automated Protocols:
+                          <span style="font-weight: 400">Therapy journeys tracked for all.</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section-image">
+                    <img
+                      src="images/home/companionos.png"
+                      alt="Tech dashboard" />
+                  </div>
+                </div>
+              </section>
+              <!-- Tab 4: Image left, text right -->
+              <section class="tab-section tab-blue">
+                <div class="tab-content-inner">
+                  <div class="section-image">
+                    <img
+                      src="images/home/consulting.png"
+                      alt="Therapy session" />
+                  </div>
+                  <div class="section-text">
+                    <div class="tab-hero">
+                      Integrated Therapies & Programs
+                    </div>
+                    <div class="tab-desc">
+                      HealIn.Health reverses diabetes, obesity, PCOS & chronic
+                      pain with <b>root-cause, multi-modal therapies</b>.
+                      <br />
+                      Tradition meets data science—sustainable, proven,
+                      patient-first.
+                    </div>
+                    <div class="tab-actions">
+                      <a href="#" class="tab-btn-main">Explore Programs</a>
+                      <a href="#" class="tab-btn-outline">Therapy List</a>
+                    </div>
+                    <div class="tab-features-list">
+                      <div class="tab-feature">
+                        <span class="icon">&#128170;</span>
+                        <span>Naturopathy:
+                          <span style="font-weight: 400">Detox, fasting, hydro/mud therapy.</span></span>
+                      </div>
+                      <div class="tab-feature">
+                        <span class="icon">&#129520;</span>
+                        <span>Physio:
+                          <span style="font-weight: 400">Spinal decompression, laser relief, cryo.</span></span>
+                      </div>
+                      <div class="tab-feature">
+                        <span class="icon">&#127873;</span>
+                        <span>Skin+ Aesthetics:
+                          <span style="font-weight: 400">Facials, lymphatic, hair care.</span></span>
+                      </div>
+                      <div class="tab-feature">
+                        <span class="icon">&#128296;</span>
+                        <span>Metabolic Wellness:
+                          <span style="font-weight: 400">Diabetes reversal, PCOS, weight reset.</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+          <!-- tabs section end -->
+
+          <!-- faq section -->
+          <section class="section">
+            <section
+              class="faq-section"
+              aria-label="Frequently Asked Questions">
+              <h1 class="faq-title">Frequently Asked Questions</h1>
+              <p class="faq-subtitle">
+                Answers to common questions to guide you through the services
+                and values of HealIn.Health.
+              </p>
+
+              <div class="faq-item">
+                <button
+                  class="faq-question"
+                  aria-expanded="false"
+                  aria-controls="faq1"
+                  id="faq1-btn">
+                  What services does HealIn.Health offer?
+                </button>
+                <div
+                  id="faq1"
+                  class="faq-answer"
+                  role="region"
+                  aria-labelledby="faq1-btn">
+                  HealIn.Health offers integrative therapies including
+                  naturopathy, physiotherapy, nutrition counseling, and
+                  personalized digital care.
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button
+                  class="faq-question"
+                  aria-expanded="false"
+                  aria-controls="faq2"
+                  id="faq2-btn">
+                  How personalized is the treatment?
+                </button>
+                <div
+                  id="faq2"
+                  class="faq-answer"
+                  role="region"
+                  aria-labelledby="faq2-btn">
+                  Our treatments are tailored using metabolic assessments and
+                  AI-driven analysis to optimize your holistic wellness.
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button
+                  class="faq-question"
+                  aria-expanded="false"
+                  aria-controls="faq3"
+                  id="faq3-btn">
+                  Can I access HealIn.Health digitally?
+                </button>
+                <div
+                  id="faq3"
+                  class="faq-answer"
+                  role="region"
+                  aria-labelledby="faq3-btn">
+                  Yes, our platform allows you to track your progress and
+                  connect with care providers anytime, anywhere.
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button
+                  class="faq-question"
+                  aria-expanded="false"
+                  aria-controls="faq4"
+                  id="faq4-btn">
+                  Are the therapies evidence-based?
+                </button>
+                <div
+                  id="faq4"
+                  class="faq-answer"
+                  role="region"
+                  aria-labelledby="faq4-btn">
+                  Absolutely, we base our services on cutting-edge medical
+                  research integrated with holistic practices.
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button
+                  class="faq-question"
+                  aria-expanded="false"
+                  aria-controls="faq5"
+                  id="faq5-btn">
+                  How can I schedule an appointment?
+                </button>
+                <div
+                  id="faq5"
+                  class="faq-answer"
+                  role="region"
+                  aria-labelledby="faq5-btn">
+                  You can book consultations via our website or mobile app;
+                  our coordinators will assist you in choosing the best plan
+                  for your needs.
+                </div>
+              </div>
+            </section>
+          </section>
+          <!-- faq section -->
+
+          <!-- testimonial section -->
+          <!-- <section class="section"></section> -->
+          <!-- testimonial section -->
+
+          <!-- contact section -->
+          <section class="section">
+            <section class="visitus-wrap" id="visitSection">
+              <div class="visitus-content">
+                <h2>Visit HealIn.Health</h2>
+                <p>
+                  Meet our wellness clinicians at our Murthal center.<br />
+                  Experience personalised care, holistic therapies, and your
+                  path to lifelong health in a welcoming, serene space.
+                </p>
+                <ul class="contact-list">
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path
+                        stroke="currentColor"
+                        stroke-width="2"
+                        d="M12 22s8-7.5 8-12A8 8 0 0 0 4 10c0 4.5 8 12 8 12Z" />
+                      <circle
+                        cx="12"
+                        cy="10"
+                        r="3"
+                        stroke="currentColor"
+                        stroke-width="2" />
+                    </svg>
+                    51-52, K.M. Stone, G.T. Karnal Road, Near, 51-52, GT
+                    Karnal Road, Murthal, Haryana 131001
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path
+                        stroke="currentColor"
+                        stroke-width="2"
+                        d="M22 16.92V19a2 2 0 0 1-2.18 2A19.72 19.72 0 0 1 3 5.18 2 2 0 0 1 5 3h2.09A2 2 0 0 1 9 4.72c.13.5.22 1.02.22 1.56A2 2 0 0 1 8.05 8L7 8.94A16.16 16.16 0 0 0 18.06 19l.94-1.01a2 2 0 0 1 1.72-.64c.54 0 1.06.09 1.57.23A2 2 0 0 1 22 16.92Z" />
+                    </svg>
+                    <a href="tel:+919254973305">+91 92549 73305</a>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <rect
+                        x="2"
+                        y="7"
+                        width="20"
+                        height="14"
+                        rx="2"
+                        stroke="currentColor"
+                        stroke-width="2" />
+                      <path
+                        stroke="currentColor"
+                        stroke-width="2"
+                        d="m22 7-10 7L2 7" />
+                    </svg>
+                    <a href="mailto:contact@healin.health">contact@healin.health</a>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        stroke-width="2" />
+                      <polyline
+                        points="12 6 12 12 16.5 12"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round" />
+                    </svg>
+                    Mon–Sat: 10AM – 8PM
+                  </li>
+                </ul>
+                <a
+                  class="visitus-btn"
+                  href="https://www.google.com/maps/search/?api=1&query=51-52+GT+Karnal+Road+Murthal+Haryana+131001"
+                  target="_blank"
+                  rel="noopener">Get Directions <span>&#8594;</span>
+                </a>
+              </div>
+              <div class="visitus-image">
+                <img
+                  src="images/home/10.png"
+                  alt="HealIn.Health Murthal Center" />
+              </div>
+            </section>
+          </section>
+          <!-- contact section -->
+        </div>
+      </div>
+    </div>
+
+    <?php include 'footer.php'; ?>
+
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
